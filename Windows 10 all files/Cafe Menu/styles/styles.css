@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   .container {
+       width: 595px;
+       min-height: 842px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+
+    header {
+        min-width: 100%;
+        max-height: 225px;
+        background-image: url(../images/header-background.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        h1 {
+            color: #976144;
+            font-family: "Acme", serif;
+            font-size: 40px;
+        }
+
+        img {
+            height: 60px;
+        }
+
+        nav {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+
+                .nav-link {
+                    background-color: rgba(0, 0, 0, .3);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        font-size: 23px;
+                        text-decoration: none;
+                        color: rgba(0, 0, 0, .9);
+                        padding: 5px 10px;
+                    }
+
+                    &:hover {
+                        background-color: #8C5A3F;
+                        
+                        a {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .active {
+                    background-color: #8C5A3F;
+                        
+                        a {
+                            color: #FFFFFF;
+                        }
+                }
+            }
+        }
+    }
+
+    main {
+        min-width: 100%;
+        min-height: 510px;
+        background-image: url(../images/main-content-background.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        .list-cont {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 23.88px 0 23.44px;
+            gap: 25px;
+
+            .list-1, .list-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+    
+    
+                .list-content-1, .list-content-2, .list-content-3 {
+
+                    h2 {
+                        font-size: 22.64px;
+                        color: #976144;
+                        margin-top: 18.87px;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                    }
+    
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4.72px;
+                        
+                        li {
+                            p {
+                                font-size: 11.32px;
+                                color: #FFFFFF;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+    
+                
+            }
+        }
+    }
+
+    footer {
+        min-width: 100%;
+        background-image: url(../images/footer-background.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 23px 20px 23px 20px;
+        display: flex;
+
+        .left {
+            width: 300px;
+
+            h3 {
+                font-size: 16px;
+                color: #8C5A3F;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 21.96px;
+                    height: 21.96px;
+                }
+            }
+            
+            img {
+                width: 185px;
+                height: 32px;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .right {
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 11px;
+
+            img {
+                width: 21.96px;
+                height: 21.96px;
+            }
+        }
+    }
+   }
+
+   @media screen and (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+
+        main {
+            flex-direction: column;
+    
+            .list-2 {
+                margin-bottom: 25px;
+            }
+        }
+    }    
+   }
+
+   @media screen and (max-width: 635px) {
+    .container {
+        header {
+            width: 350px;
+    
+            img {
+                width: 250px;
+            }
+    
+            nav {
+                ul {
+                    .nav-link {
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        main {
+            width: 350px;
+        }
+    
+        footer {
+            width: 350px;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+    
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+        }
+    }
+   }
+
+   @media screen and (max-width: 348px) {
+    .container {
+        header {
+            nav {
+                ul {
+                    .nav-link {
+                        a {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   }
+
+   /* Up to 305px responsive */
+}
